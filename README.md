@@ -1,26 +1,12 @@
-# VDeamoV's Blog
-### About Owner
+# awesomeAJF's blog
+### About Author
 
-This Blog is contributed by VDeamoV.
+This Blog is contributed by [VDeamoV](https://github.com/DeamoV), [Henryjz](https://github.com/Henryjz), [WdBlink](https://github.com/WdBlink)
 
-Contact：vincent.duan95@outlook.com
+Contact：vincent.duan95@gmail.com
 
 ### Overview
 
-This Blog is to record my Learned Knowledge. 
+This Blog is to record our Learned Knowledge in deep learning. 
 
-### Blog Current Goals
-
-- Fix Code HighLight
-- Make categories more beautiful    DDL：2018-08-20
-- Finish Machine Learning Basic    DDL：2018-8-20
-
-### Milestones
-
-- 2018-08-05  Fork the Next Theme setup the Blog
-- 2018-08-09  Add Comment system to the Blog
-- 2018-08-11  Add Search Item | Add Progress Bar during page loading | Add a beatiful 404 page
-
-### Discussion
-
-- What is the essential Part to create a beautiful blog?
+*ps. all papers we recommand in this blog are all from top conference*
