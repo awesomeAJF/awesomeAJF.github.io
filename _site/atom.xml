@@ -1,4 +1,163 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-26T09:52:52+08:00</updated><id>http://localhost:4000/</id><title type="html">Beta-Demo-Field</title><subtitle>Work Hard! Play Hard!</subtitle><author><name>awesomeAJF</name></author><entry><title type="html">Few-shot Learning 总结</title><link href="http://localhost:4000/fewshotlearning/2019/03/26/few-shot-summery-01/" rel="alternate" type="text/html" title="Few-shot Learning 总结" /><published>2019-03-26T00:00:00+08:00</published><updated>2019-03-26T00:00:00+08:00</updated><id>http://localhost:4000/fewshotlearning/2019/03/26/few-shot-summery-01</id><content type="html" xml:base="http://localhost:4000/fewshotlearning/2019/03/26/few-shot-summery-01/">&lt;h2 id=&quot;n-ways-k-shot-few-shot-learning-问题的描述&quot;&gt;N ways K shot few-shot Learning 问题的描述&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-16T21:53:34+08:00</updated><id>http://localhost:4000/</id><title type="html">Beta-Demo-Field</title><subtitle>Work Hard! Play Hard!</subtitle><author><name>awesomeAJF</name></author><entry><title type="html">Tensorflowjs Playground</title><link href="http://localhost:4000/fewshotlearning/2020/02/16/tensorflowjs/" rel="alternate" type="text/html" title="Tensorflowjs Playground" /><published>2020-02-16T00:00:00+08:00</published><updated>2020-02-16T00:00:00+08:00</updated><id>http://localhost:4000/fewshotlearning/2020/02/16/tensorflowjs</id><content type="html" xml:base="http://localhost:4000/fewshotlearning/2020/02/16/tensorflowjs/">&lt;html&gt;
+&lt;head&gt;
+
+  &lt;!-- Import TensorFlow.js --&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js&quot;&gt;&lt;/script&gt;
+  &lt;!-- Import tfjs-vis --&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js&quot;&gt;&lt;/script&gt;
+
+  &lt;!-- Import the main script file --&gt;
+  &lt;script src=&quot;/assets/tmp/script.js&quot;&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</content><author><name>awesomeAJF</name></author><category term="Few_Shot_Learning" /><summary type="html"></summary></entry><entry><title type="html">Get To The Point: Summarization with Pointer-Generator Networks论文笔记</title><link href="http://localhost:4000/nlp/2019/04/04/Get_To_The_Point_Summarization_with_Pointer-Generator_Networks_review/" rel="alternate" type="text/html" title="Get To The Point: Summarization with Pointer-Generator Networks论文笔记" /><published>2019-04-04T00:00:00+08:00</published><updated>2019-04-04T00:00:00+08:00</updated><id>http://localhost:4000/nlp/2019/04/04/Get_To_The_Point_Summarization_with_Pointer-Generator_Networks_review</id><content type="html" xml:base="http://localhost:4000/nlp/2019/04/04/Get_To_The_Point_Summarization_with_Pointer-Generator_Networks_review/">&lt;p&gt;﻿### 论文：&lt;a href=&quot;http://arxiv.org/abs/1704.04368&quot;&gt;Get To The Point: Summarization with Pointer-Generator Networks&lt;/a&gt;解读&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract类型的文本摘要存在的问题&quot;&gt;&lt;strong&gt;Abstract类型的文本摘要存在的问题&lt;/strong&gt;：&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;容易产生不准确的事实；&lt;/li&gt;
+  &lt;li&gt;倾向于重复相同的内容。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i2.bvimg.com/682738/36db882aa8eb3096.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;注：如上面所示，作为基线的seq2seq+Attention这样的纯粹的生成式模型存在1.无法生成OOV词汇；2.歪曲事实两个问题。Pointer Generator 存在重复内容的问题。在引入Coverage mechanism之后的Pointer-Gen+Coverage模型能够解决上面的三个问题。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;论文的创新点&quot;&gt;&lt;strong&gt;论文的创新点&lt;/strong&gt;：&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;（1）使用一个混合的指针-生成器网络(hybrid pointer-generator network)，它可以通过指针从源文本复制单词，这有助于准确复制信息，同时保留通过生成器生成新单词的能力。&lt;/li&gt;
+  &lt;li&gt;（2）使用覆盖率（coverage）来追踪摘要的内容，这有助于缓解重复的现象。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+
+&lt;p&gt;​	文本摘要使用抽取和生成两种方法：抽取式和生成式。抽取式是从文章中选择关键的词句拼接而成，这种方式能够保证生成句子语法和准确性的下限。然而高质量的摘要往往需要分段、泛化或者结合知识，这种类型的摘要只能使用生成式方法。seq2seq模型有三个问题：不准确的再现事实，无法处理词汇表外的（OOV）的单词，重复自己。论文提出的模型可以在多句子的文本摘要中解决这三个问题。混合指针-生成器网络便于通过指向从源文本复制单词，这提高了OOV单词的准确性和处理能力，同时保留了生成新单词的能力。可以看作是提取和抽象方法之间的平衡。在消除重复方面，论文提出了覆盖向量（coverage vector）来跟踪和控制对源文本的覆盖。&lt;/p&gt;
+
+&lt;h4 id=&quot;seq2seq-attention-model&quot;&gt;seq2seq attention model&lt;/h4&gt;
+
+&lt;p&gt;1.标准的seq2seq模型使用BiLSTM对源文本进行编码，然后使用Encoder hidden state和Decoder hidden state计算新的时间步的Attention分布，进而得到新的上下文向量context vector，使用softmax层对上下文变量解码得到新时间步的词汇分布。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;根据当前解码器的隐藏状态$s_t$和输入不同时间步的隐藏状态$h_i$分别计算得到attention分布$a^t​$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;e_i^t = v^T tanh(W_hh_i+W_ss_t+b_{att})&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;a^t = softmax(e^t)&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;计算attention分布对所有的$h_i$加权和&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;h_t^* = \sum _i a_i^t h_i&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;使用$[s_t,h_t^*]​$计算最终的预测值&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{vocab} = softmax(V^{'}(V[s_t, h_t^*]+b)+b^{'})&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i2.bvimg.com/682738/310feb2eea3b74b4.png&quot; alt=&quot;在这里插入图片描述&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;pointter-genearator-network&quot;&gt;Pointter-genearator network&lt;/h4&gt;
+
+&lt;p&gt;1.pointer-generator网络的关键之处在于使用一个$p_{gen}$来表征从词汇表中生成当前时间步词汇的概率,$（1-p_{gen})$表示从源文本中拷贝词汇的概率。
+2.$P_{vocab}(w)$表示使用标准seq2seq网络生成词汇的分布，$\sum_{i:w_i=w}a_i^t $表示上下文中所有当前词汇出现是其atttention的和。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;计算$P_{gen}​$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{gen} = \sigma(w_{h^*}^Th_t^*+ w_s^Ts_t+ w_x^Tx_t+b_{ptr})&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;与seq2seq attention model相同，计算$P_{vocab}​$&lt;/li&gt;
+  &lt;li&gt;计算$P_{gen}$和$(1-P_{gen})$加权的$P(w)$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(w) = P_{gen}P_{vocab}(w)+(1-p_{gen}) \sum _{i:w_i =w}a_i^t&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i2.bvimg.com/682738/379d25261c3c75ac.png&quot; alt=&quot;在这里插入图片描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;注：以上图为例，decoder已经输出了Germany beat两个词汇，这时候希望生成下一个时间步的词汇，如果目标词汇$w$未出现在原文中则$\sum _ {i:w_i=w} a_i^t=0$,&lt;/em&gt; 如果目标词汇$w$不在词典中则$P_{vocab}(w)=0​$&lt;/p&gt;
+
+&lt;h4 id=&quot;coverage-mechanism&quot;&gt;Coverage mechanism&lt;/h4&gt;
+
+&lt;p&gt;1.重复的问题在多句摘要中经常出现，论文中引入覆盖(coverage)机制来监控摘要中生成的词对源文本的覆盖情况，以减少重复关注一部分源文本进而生成重复内容的情况出现。&lt;/p&gt;
+
+&lt;p&gt;2.coverage vector $c_t= \sum_{t’=0}^{t-1} a^{t’}$等于历史time step的attention之和来表示decoder生成过的词汇的attention覆盖的情况。$c_t$作为下一个时间步计算attention的一个输入，所以pointer-gen网络计算attention那个步骤的公式变为:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;e_i^t = v^T tanh(W_hh_i+W_ss_t+ w_cc_i^t + b_{att})&lt;/script&gt;
+
+&lt;p&gt;3.论文引入coverage损失对重复关注同一个位置进行的惩罚,公式为：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;covloss _t = \sum _i min(a_i^t, c_i^t)&lt;/script&gt;
+
+&lt;p&gt;4.最终的loss是$P(w)$与covLoss之和:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;loss_t = -logP(w_t^*)+\lambda \sum _i min(a_i^t, c_i^t&lt;/script&gt;
+
+&lt;h4 id=&quot;result&quot;&gt;result&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;http://i2.bvimg.com/682738/a33fd5a77bb46996.png&quot; alt=&quot;在这里插入图片描述&quot; /&gt;&lt;/p&gt;</content><author><name>awesomeAJF</name></author><category term="summarization" /><summary type="html">﻿### 论文：Get To The Point: Summarization with Pointer-Generator Networks解读</summary></entry><entry><title type="html">《The Evolved Transformer》论文总结</title><link href="http://localhost:4000/nlp/2019/03/28/The_Evolved_Transformer_review/" rel="alternate" type="text/html" title="《The Evolved Transformer》论文总结" /><published>2019-03-28T00:00:00+08:00</published><updated>2019-03-28T00:00:00+08:00</updated><id>http://localhost:4000/nlp/2019/03/28/The_Evolved_Transformer_review</id><content type="html" xml:base="http://localhost:4000/nlp/2019/03/28/The_Evolved_Transformer_review/">&lt;h3 id=&quot;google-brain-the-evolved-transformer&quot;&gt;Google Brain-&lt;a href=&quot;http://arxiv.org/abs/1901.11117&quot;&gt;The Evolved Transformer&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h4 id=&quot;论文创新点&quot;&gt;论文创新点：&lt;/h4&gt;
+
+&lt;p&gt;​	使用神经架构搜索的方法，为 seq2seq 任务找到了一种比Transformer更好的前馈网络架构。架构搜索是基于Transformer进行演进，最终得到的Evolved Transformer 的新架构在四个成熟的语言任务（WMT 2014 英德、WMT 2014 英法、WMT 2014 英捷及十亿词语言模型基准（LM1B））上的表现均优于原版 Transformer。在用大型模型进行的实验中，Evolved Transformer 的效率（FLOPS）是 Transformer 的两倍，而且质量没有损失。在更适合移动设备的小型模型（参数量为 7M）中，Evolved Transformer 的 BLEU 值高出 Transformer 0.7。&lt;/p&gt;
+
+&lt;h4 id=&quot;搜索空间&quot;&gt;搜索空间：&lt;/h4&gt;
+
+&lt;p&gt;​	一个模型包含encoder和decoder，各包含若干个单元，编码器的单元包含6个模块，解码器的单元包含8个模块。每个模块分左右两个分支，各自接受一个隐藏状态作为输入。按照层次从低到高分支搜索项分为：input、normalization、layer、output dimension和activation。左右分支通过combiner function合并为新的隐藏状态作为输出。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i2.bvimg.com/682738/433f27b8a361812e.png&quot; alt=&quot;在这里插入图片描述&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Input&lt;/strong&gt;：分支可以从输入池中选择一个隐藏状态作为当前block的输入。单元中的第i个block可以从[0, i]个隐藏状态中进行选择，其中第j个隐藏状态表示该cell中第j个block的输出，第0个候选项为单元的输入。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Normalization&lt;/strong&gt;：归一化项提供了两个选项， [LAYER NORMALIZATION (Ba et al., 2016), NONE]&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Layer&lt;/strong&gt;：构造一个神经网络层，提供的选项包括：
+    &lt;ul&gt;
+      &lt;li&gt;标准卷积&lt;/li&gt;
+      &lt;li&gt;深度可分离卷积&lt;/li&gt;
+      &lt;li&gt;LIGHTWEIGHT 卷积&lt;/li&gt;
+      &lt;li&gt;n头注意力层&lt;/li&gt;
+      &lt;li&gt;GATED LINEAR UNIT&lt;/li&gt;
+      &lt;li&gt;ATTEND TO ENCODER（decoder专用）&lt;/li&gt;
+      &lt;li&gt;全等无操作&lt;/li&gt;
+      &lt;li&gt;Dead Branch，切断输出&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Relative Output Dimension&lt;/strong&gt;：决定神经网络层输出的维度。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Activation&lt;/strong&gt;：搜索中激活函数的选项有[SWISH, RELU, LEAKY RELU,  NON]&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Combiner Function&lt;/strong&gt;：表征的是左枝和右枝的结合方式，包括{ADDITION、CONCATENATION、MULTIPLICATION}。如果左右枝最终输出形状不同，则需要使用padding进行填充。短的向量向长的向量对齐，当使用加法进行结合时使用0填充，当使用乘法进行结合时使用1填充。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Number of cells&lt;/strong&gt;：纵向叠加的cell的数量，搜索范围是[1,6]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;演进的过程&quot;&gt;演进的过程：&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;锦标赛选择（Tournament Selection）：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;tournament selection算法是一种遗传算法，首先随机生成一批个体, 这些个体是一个个由不同组件组成的完整的模型，我们在目标任务上训练这些个体并在验证集上面计算他们的表现。&lt;/li&gt;
+      &lt;li&gt;首先在初始种群中进行采样产生子种群，从子种群中选出适应性（fitness）最高的个体作为亲本（parent）。被选中的亲本进行突变——也就是将网络模型中的一些组件改变为其他的组件——以产生子模型，然后在对这些子模型分配适应度（fitness），在训练集和测试集上进行训练和验证。&lt;/li&gt;
+      &lt;li&gt;对种群重新进行采样，用通过评估的子模型代替子种群中的fitness的个体以生成新的种群。&lt;/li&gt;
+      &lt;li&gt;重复上面的步骤，直到种群中出现超过给定指标的模型。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;渐进式动态障碍（Progressive Dynamic Hurdle）：&lt;/p&gt;
+
+    &lt;p&gt;​	实验使用的训练集是WMT14英语到德语的机器翻译数据集，完整的训练和验证过程需要很长的时间，如果在所有的子模型上进行完整的训练和验证过程将会耗费很大的计算资源。因此论文中使用渐进式动态障碍的方法来提前停止一些没有前景的模型的训练，转而将更多的计算资源分配那些当前表现更好的子模型。具体来说就是让当前表现最好的一些模型多训练一些step。&lt;/p&gt;
+
+    &lt;p&gt;​	假设当前种群经过一次锦标赛选择，生成了m个子模型并且加入到了种群中，这时候计算整个种群fitness的平均值$h_0$,下一次锦标赛选择将会以$h_0$作为对照，生成的另外m个fitness超过$h_0$的子模型可以继续训练$s_1$个step，接着进行种群中的所有的其他个体会继续训练$s_1$个step，然后在新的种群中生成$h_1$，以此类推知道种群中所有的个体的训练step都达到一个指定值。&lt;/p&gt;
+
+    &lt;p&gt;​	如果一个子模型是由第$i$次锦标赛选择之后的亲本生成的，那么验证的过程将会进行$i$次。第一次为该模型分配$s_0$次的训练step并且在验证集上进行验证，若验证的fitness大于$h_0$则再分配$s_1$次训练step，再验证，再与$h_1$比较，只有子样本通过${h_0, h_1, …, h_i}$次比较才能作为新的个体加入到新的种群中。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i2.bvimg.com/682738/9ac3d366ada01c1a.png&quot; alt=&quot;在这里插入图片描述&quot; /&gt;&lt;/p&gt;</content><author><name>awesomeAJF</name></author><category term="Feature_Extractor" /><summary type="html">Google Brain-The Evolved Transformer</summary></entry><entry><title type="html">Few-shot Learning 总结</title><link href="http://localhost:4000/fewshotlearning/2019/03/26/few_shot_summery_01/" rel="alternate" type="text/html" title="Few-shot Learning 总结" /><published>2019-03-26T00:00:00+08:00</published><updated>2019-03-26T00:00:00+08:00</updated><id>http://localhost:4000/fewshotlearning/2019/03/26/few_shot_summery_01</id><content type="html" xml:base="http://localhost:4000/fewshotlearning/2019/03/26/few_shot_summery_01/">&lt;h2 id=&quot;n-ways-k-shot-few-shot-learning-问题的描述&quot;&gt;N ways K shot few-shot Learning 问题的描述&lt;/h2&gt;
 &lt;p&gt;最终训练模型的效果需要达到，给模型之前完全没见过的  $N$ 个新类，每个新类中只有 $K$ 个样本。该模型需要能够通过利用这仅有的 $N \times K$  个样本，来对接下来给出的新样本进行分类。在 RelationNet work &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 的问题描述中，将这给出的 $N \times K$ 个样本集称为 Support Set ，待分类的图片集称为 Query Set。&lt;/p&gt;
 &lt;h2 id=&quot;常用的训练步骤&quot;&gt;常用的训练步骤&lt;/h2&gt;
 &lt;h3 id=&quot;训练集中的类的样本不止-k-个样本&quot;&gt;训练集中的类的样本不止 $K$ 个样本&lt;/h3&gt;

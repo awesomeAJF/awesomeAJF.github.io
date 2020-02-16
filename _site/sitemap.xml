@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/fewshotlearning/2019/03/26/few-shot-summery-01/</loc>
+<loc>http://localhost:4000/fewshotlearning/2019/03/26/few_shot_summery_01/</loc>
 <lastmod>2019-03-26T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/nlp/2019/03/28/The_Evolved_Transformer_review/</loc>
+<lastmod>2019-03-28T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/nlp/2019/04/04/Get_To_The_Point_Summarization_with_Pointer-Generator_Networks_review/</loc>
+<lastmod>2019-04-04T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/fewshotlearning/2020/02/16/tensorflowjs/</loc>
+<lastmod>2020-02-16T00:00:00+08:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
@@ -33,10 +45,10 @@
 </url>
 <url>
 <loc>http://localhost:4000/404.html</loc>
-<lastmod>2018-11-10T23:46:28+08:00</lastmod>
+<lastmod>2019-03-26T10:00:40+08:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/googlee21dde96f1cfb63f.html</loc>
-<lastmod>2018-11-10T23:46:28+08:00</lastmod>
+<lastmod>2019-03-26T10:00:40+08:00</lastmod>
 </url>
 </urlset>
