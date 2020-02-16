@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-16T21:53:34+08:00</updated><id>http://localhost:4000/</id><title type="html">Beta-Demo-Field</title><subtitle>Work Hard! Play Hard!</subtitle><author><name>awesomeAJF</name></author><entry><title type="html">Tensorflowjs Playground</title><link href="http://localhost:4000/fewshotlearning/2020/02/16/tensorflowjs/" rel="alternate" type="text/html" title="Tensorflowjs Playground" /><published>2020-02-16T00:00:00+08:00</published><updated>2020-02-16T00:00:00+08:00</updated><id>http://localhost:4000/fewshotlearning/2020/02/16/tensorflowjs</id><content type="html" xml:base="http://localhost:4000/fewshotlearning/2020/02/16/tensorflowjs/">&lt;html&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-16T22:45:02+08:00</updated><id>http://localhost:4000/</id><title type="html">Beta-Demo-Field</title><subtitle>Work Hard! Play Hard!</subtitle><author><name>awesomeAJF</name></author><entry><title type="html">Tensorflowjs Playground</title><link href="http://localhost:4000/fewshotlearning/2020/02/16/tensorflowjs/" rel="alternate" type="text/html" title="Tensorflowjs Playground" /><published>2020-02-16T00:00:00+08:00</published><updated>2020-02-16T00:00:00+08:00</updated><id>http://localhost:4000/fewshotlearning/2020/02/16/tensorflowjs</id><content type="html" xml:base="http://localhost:4000/fewshotlearning/2020/02/16/tensorflowjs/">&lt;html&gt;
 &lt;head&gt;
 
   &lt;!-- Import TensorFlow.js --&gt;
@@ -7,10 +7,57 @@
   &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js&quot;&gt;&lt;/script&gt;
 
   &lt;!-- Import the main script file --&gt;
-  &lt;script src=&quot;/assets/tmp/script.js&quot;&gt;&lt;/script&gt;
 
 &lt;/head&gt;
 &lt;body&gt;
+  &lt;div class=&quot;tfjs-example-container&quot;&gt;
+    &lt;section class='title-area'&gt;
+      &lt;h1&gt; Try to train mnit with official code&lt;/h1&gt;
+      &lt;p class='subtitle'&gt;Train a model to recognize handwritten digits from the MNIST database using the tf.layers
+        api.
+      &lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h2 class='section-head'&gt;Description&lt;/h2&gt;
+      &lt;p&gt;
+      This test show the awesome feature for tfjs. We will used trained model later. The MNIST dataset is used as training data.
+      &lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h1&gt; Give it a try &lt;/h1&gt;
+      &lt;p&gt;
+      Choose which model (
+        &lt;select id=&quot;model-type&quot;&gt;
+          &lt;option&gt;ConvNet&lt;/option&gt;
+          &lt;option&gt;DenseNet&lt;/option&gt;
+        &lt;/select&gt;
+      ) to use and train &lt;input id=&quot;train-epochs&quot; value=&quot;3&quot;&gt; epochs.
+      &lt;/p&gt;
+      &lt;button id=&quot;train&quot;&gt;Load Data and Train Model&lt;/button&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h1&gt;Training Progress&lt;/h1&gt;
+      &lt;p id=&quot;status&quot;&gt;&lt;/p&gt;
+      &lt;p id=&quot;message&quot;&gt;&lt;/p&gt;
+
+      &lt;div id=&quot;stats&quot;&gt;
+        &lt;div class=&quot;canvases&quot;&gt;
+          &lt;label id=&quot;loss-label&quot;&gt;&lt;/label&gt;
+          &lt;div id=&quot;loss-canvas&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;canvases&quot;&gt;
+          &lt;label id=&quot;accuracy-label&quot;&gt;&lt;/label&gt;
+          &lt;div id=&quot;accuracy-canvas&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;script src=&quot;/assets/tmp/script.js&quot;&gt;&lt;/script&gt;
+
+  &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</content><author><name>awesomeAJF</name></author><category term="Few_Shot_Learning" /><summary type="html"></summary></entry><entry><title type="html">Get To The Point: Summarization with Pointer-Generator Networks论文笔记</title><link href="http://localhost:4000/nlp/2019/04/04/Get_To_The_Point_Summarization_with_Pointer-Generator_Networks_review/" rel="alternate" type="text/html" title="Get To The Point: Summarization with Pointer-Generator Networks论文笔记" /><published>2019-04-04T00:00:00+08:00</published><updated>2019-04-04T00:00:00+08:00</updated><id>http://localhost:4000/nlp/2019/04/04/Get_To_The_Point_Summarization_with_Pointer-Generator_Networks_review</id><content type="html" xml:base="http://localhost:4000/nlp/2019/04/04/Get_To_The_Point_Summarization_with_Pointer-Generator_Networks_review/">&lt;p&gt;﻿### 论文：&lt;a href=&quot;http://arxiv.org/abs/1704.04368&quot;&gt;Get To The Point: Summarization with Pointer-Generator Networks&lt;/a&gt;解读&lt;/p&gt;
 
