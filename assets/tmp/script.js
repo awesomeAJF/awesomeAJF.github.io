@@ -1,22 +1,10 @@
-/**
- * @license
- * Copyright 2018 Google LLC. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * =============================================================================
- */
 const statusElement = document.getElementById('status');
 const messageElement = document.getElementById('message');
 const imagesElement = document.getElementById('images');
+const lossLabelElement = document.getElementById('loss-label');
+const accuracyLabelElement = document.getElementById('accuracy-label');
+// use documnet.getElementById to interact with
+const lossValues = [[], []];
 
 function logStatus(message) {
   statusElement.innerText = message;
@@ -56,9 +44,6 @@ function showTestResults(batch, predictions, labels) {
   }
 }
 
-const lossLabelElement = document.getElementById('loss-label');
-const accuracyLabelElement = document.getElementById('accuracy-label');
-const lossValues = [[], []];
 function plotLoss(batch, loss, set) {
   const series = set === 'train' ? 0 : 1;
   lossValues[series].push({x: batch, y: loss});
@@ -99,8 +84,7 @@ function draw(image, canvas) {
   const data = image.dataSync();
   for (let i = 0; i < height * width; ++i) {
     const j = i * 4;
-    imageData.data[j + 0] = data[i] * 255;
-    imageData.data[j + 1] = data[i] * 255;
+    imageData.data[j + 0] = data[i] * 255; imageData.data[j + 1] = data[i] * 255;
     imageData.data[j + 2] = data[i] * 255;
     imageData.data[j + 3] = 255;
   }

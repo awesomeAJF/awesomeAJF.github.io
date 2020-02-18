@@ -4,7 +4,7 @@
     <entry>
       <title><![CDATA[Tensorflowjs Playground]]></title>
       <url>/fewshotlearning/2020/02/16/tensorflowjs/</url>
-      <content type="text"><![CDATA[                       Try to train mnit with official code      Train a model to recognize handwritten digits from the MNIST database using the tf.layers        api.                    Description            This test show the awesome feature for tfjs. We will used trained model later. The MNIST dataset is used as training data.                     Give it a try             Choose which model (                  ConvNet          DenseNet              ) to use and train  epochs.            Load Data and Train Model              Training Progress                                                                                                          ]]></content>
+      <content type="text"><![CDATA[             Mnist practice test   Here is the test for input a image by user, then classify them by loaded keras model    Select the Image to input            图片预览：                                                    ]]></content>
       <categories>
         
           <category> FewShotLearning </category>
