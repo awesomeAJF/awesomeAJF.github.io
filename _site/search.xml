@@ -4,7 +4,7 @@
     <entry>
       <title><![CDATA[Tensorflowjs Playground]]></title>
       <url>/fewshotlearning/2020/02/16/tensorflowjs/</url>
-      <content type="text"><![CDATA[             Mnist practice test   Here is the test for input a image by user, then classify them by loaded keras model    Select the Image to input            图片预览：                                                    ]]></content>
+      <content type="text"><![CDATA[               Mnist practice test   Here is the test for input a image by user, then classify them by loaded keras model    Select the Mnist Image to input                  ]]></content>
       <categories>
         
           <category> FewShotLearning </category>

@@ -12,7 +12,7 @@ tags: ["Few_Shot_Learning"]
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
   <!-- Import tfjs-vis -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
-
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"> </script>
   <!-- Import the main script file -->
 
 </head>
@@ -20,17 +20,12 @@ tags: ["Few_Shot_Learning"]
   <h1> Mnist practice test</h1>
   <p> Here is the test for input a image by user, then classify them by loaded keras model </p>
 
-  <h2> Select the Image to input</h2>
+  <h2> Select the Mnist Image to input</h2>
 
-    <form method="post" action="http://localhost/test" enctype="multipart/form-data">
-        <p>图片预览：</p>
-        <p><div id="test-image-preview" style="border: 1px solid #ccc; width: 100%; height: 200px; background-size: contain; background-repeat: no-repeat; background-position: center center;"></div></p>
-        <p>
-          <input type="file" id="test-image-file" name="test">
-        </p>
-        <p id="test-file-info"></p>
-    </form>
+    <input id="img_input" type="file" accept="image/*"/>
+    <label for="img_input"></label>
+    <div class="preview_box"></div>
     <div id="predResult"></div>
-  <script src="/assets/tmp/new.js"></script>
+  <script src="/assets/tmp/new_2.js"></script>
 </body>
 </html>
